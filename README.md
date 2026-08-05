@@ -1,6 +1,6 @@
 # refqa-privacy
 
-Hosts the privacy policy for the **Rifqa (رِفقة)** app at
+Hosts the privacy policy for the **Refqa (رِفقة)** app at
 <https://husseinmohamed99.github.io/refqa-privacy/>, via GitHub Pages.
 
 ## Why this is a separate repo

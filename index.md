@@ -12,12 +12,18 @@ analytics trackers.
 
 One thing does leave your device, and you should know about it: **your location**
 is sent to the prayer-times service (AlAdhan) to calculate accurate times for
-where you are.
+where you are. You are told this, in the app, before it ever asks for the
+permission.
 
 Your **voice is only ever sent anywhere if you explicitly say yes.** The
 recitation check runs on your device by default; on phones that cannot do that,
 the app asks — once, in plain words — whether you want to use Google's speech
 service instead, and you can change that answer at any time in Settings.
+
+If the app **crashes**, a technical report of the failure is sent to our error
+tracker (Sentry) so it can be fixed. Your location is stripped out of those
+reports before they leave the device, and they carry no identifier for you.
+
 Everything else — your bookmarks, streaks, dhikr counts, and settings — stays on
 your phone.
 
@@ -133,20 +139,11 @@ Notification permission is optional and revocable in your device settings.
 
 ## Crash reporting
 
-**The current release does not report crashes. No crash or error data is
-collected or transmitted at all.**
+Refqa uses **Sentry** (<https://sentry.io>) to report crashes and errors so they
+can be fixed. What is sent is a technical description of the failure: the error,
+a stack trace, and device/OS details such as model, OS version, and app version.
 
-Refqa is built to support optional crash reporting through **Sentry**
-(<https://sentry.io>), but it only ever activates when the app is built with a
-Sentry key configured, and this release is not. If a future release turns it on,
-this policy will be updated with a new "last updated" date before that release
-ships.
-
-For transparency, this is what it would send if it were enabled: a technical
-description of the failure — the error, a stack trace, and device/OS details
-such as model, OS version, and app version.
-
-Even then, the following would be deliberately **never** sent:
+Deliberately **not** sent:
 
 - **Your location.** Coordinates are stripped from every report before it
   leaves the device, including from network URLs and error messages that would
@@ -157,10 +154,10 @@ Even then, the following would be deliberately **never** sent:
 - **Any identifier for you**, since the app has none to send.
 - **Your voice or any audio.**
 
-Routine network failures (being offline, a timeout) would not be reported at all.
+Routine network failures (being offline, a timeout) are not reported at all.
 
-Were it enabled, Sentry would process that data on our behalf under its own
-privacy policy — <https://sentry.io/privacy/>.
+Sentry processes this data on our behalf under its own privacy policy —
+<https://sentry.io/privacy/>.
 
 ## What is stored on your device
 
