@@ -185,6 +185,8 @@ receives your coordinates.
 | AlAdhan (`api.aladhan.com`) | Prayer times, qibla, hijri dates | **Yes** |
 | AlQuran.cloud (`api.alquran.cloud`) | Qur'an text and verse audio | No |
 | MP3Quran (`mp3quran.net`) | Reciter catalogue and audio | No |
+| Qurango (`backup.qurango.net`) | Live radio station audio | No |
+| RadioJar (`stream.radiojar.com`) | Live radio station audio | No |
 | quran.com (`api.quran.com`) | Tafsir and verse text | No |
 | jsDelivr (`cdn.jsdelivr.net`) | Hadith collections | No |
 | Sunnah.com (`api.sunnah.com`) | Hadith (when configured) | No |
